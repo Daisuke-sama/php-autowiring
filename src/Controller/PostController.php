@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Service\Serializer;
 
-class IndexController
+class PostController
 {
     private Serializer $serializer;
 
@@ -16,8 +16,8 @@ class IndexController
     public function index(): string
     {
         return $this->serializer->serialize([
-            'Action' => 'index',
-            'Date' => date('Y-m-d'),
+            'Action' => 'post',
+            'Time' => date('H:i:s'),
         ]);
     }
 }
