@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace App\Service;
 
 
 use App\Format\FormatInterface;
@@ -18,7 +18,7 @@ class Serializer
         $this->format = $format;
     }
 
-    public function serialize($data): string {
+    public function serialize(array $data): string {
         $this->format->setData($data);
 
         return $this->format->convert();

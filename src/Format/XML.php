@@ -3,8 +3,9 @@
 namespace App\Format;
 
 class XML extends BaseFormat
-        implements NamedFormatInterface, FormatInterface {
-    public function convert()
+    implements NamedFormatInterface, FormatInterface
+{
+    public function convert(): string
     {
         $result = '';
 
@@ -15,7 +16,7 @@ class XML extends BaseFormat
         return htmlspecialchars($result);
     }
 
-    public function getName(): string 
+    public function getName(): string
     {
         return 'XML';
     }
