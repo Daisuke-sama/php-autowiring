@@ -9,6 +9,7 @@ use App\Format\YAML;
 use App\Format\FromStringInterface;
 use App\Format\BaseFormat;
 use App\Format\NamedFormatInterface;
+use App\Serializer;
 
 
 $data = [
@@ -16,9 +17,12 @@ $data = [
     "surname" => "Webpro"
 ];
 
-$formats = [
-    new JSON($data),
-    new XML($data),
-    new YAML($data)
-];
+$serializer = new Serializer(new YAML());
+var_dump($serializer->serialize($data));
+
+//$formats = [
+//    new JSON($data),
+//    new XML($data),
+//    new YAML($data)
+//];
 

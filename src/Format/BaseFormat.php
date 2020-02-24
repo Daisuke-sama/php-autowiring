@@ -15,12 +15,12 @@ abstract class BaseFormat {
         return $this->data;
     }
 
-    public function setData(array $data)
+    public function setData(array $data): void
     {
         $this->data = $data;
     }
 
-    public abstract function convert();
+    public abstract function convert(): string ;
 
     // public abstract function convertFromString();
 
