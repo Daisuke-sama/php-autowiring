@@ -1,7 +1,8 @@
 {
   "name": "php/autowiring",
   "require": {
-    "php": ">=7.4.0"
+    "php": ">=7.4.0",
+    "doctrine/annotations": "^1.6"
   },
   "autoload": {
     "psr-4": {
